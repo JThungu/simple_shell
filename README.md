@@ -16,4 +16,3 @@
 15. `14.Variables` - `Handle variables replacement`
 16. `15.Comments` - `Handle comments (#)`
 17. `16. File as input` - `Usage: simple_shell [filename]`
-
