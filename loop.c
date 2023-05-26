@@ -2,7 +2,7 @@
 
 /**
  * hsh - main shell loop
- * @pop: the parameter & return pop struct
+ * @pop: parameter structure for prototype
  * @av: the argument vector from main()
  *
  * Return: 0 on success, 1 on error, or error code
@@ -45,7 +45,7 @@ int hsh(pops *pop, char **av)
 
 /**
  * find_builtin - finds a builtin command
- * @pop: the parameter & return pop struct
+ * @pop: parameter structure for prototype
  *
  * Return: -1 if builtin not found,
  *			0 if builtin executed successfully,
@@ -132,7 +132,6 @@ void fork_cmd(pops *pop)
 	child_pid = fork();
 	if (child_pid == -1)
 	{
-		/* TODO: PUT ERROR FUNCTION */
 		perror("Error:");
 		return;
 	}
@@ -145,7 +144,6 @@ void fork_cmd(pops *pop)
 				exit(126);
 			exit(1);
 		}
-		/* TODO: PUT ERROR FUNCTION */
 	}
 	else
 	{
