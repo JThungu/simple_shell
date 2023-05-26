@@ -2,8 +2,8 @@
 
 /**
  * **strtow - splits a string into words repeat delimiters are ignored
- * @str: the input string
- * @d: the delimeter string
+ * @str: string insert
+ * @d: string delimeter
  * Return: a pointer to an array of strings, or NULL on failure
  */
 
@@ -49,9 +49,9 @@ char **strtow(char *str, char *d)
 }
 
 /**
- * **strtow2 - splits a string into words
- * @str: the input string
- * @d: the delimeter
+ * **strtow2 - splits string into words
+ * @str: input string
+ * @d: delimeter
  * Return: a pointer to an array of strings, or NULL on failure
  */
 char **strtow2(char *str, char d)
