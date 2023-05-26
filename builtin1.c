@@ -1,10 +1,8 @@
 #include "shell.h"
 
 /**
- * _myhistory - displays the history list, one command by line, preceded
- *              with line numbers, starting at 0.
- * @pop: Structure containing potential arguments. Used to maintain
- *        constant function prototype
+ * _myhistory - displays the history list
+ * @pop: parameter structure for prototype
  *  Return: Always 0
  */
 int _myhistory(pops *pop)
@@ -15,7 +13,7 @@ int _myhistory(pops *pop)
 
 /**
  * unset_alias - sets alias to string
- * @pop: parameter struct
+ * @pop: parameter structure for prototype
  * @str: the string alias
  *
  * Return: Always 0 on success, 1 on error
@@ -38,7 +36,7 @@ int unset_alias(pops *pop, char *str)
 
 /**
  * set_alias - sets alias to string
- * @pop: parameter struct
+ * @pop: parameter structure for prototype
  * @str: the string alias
  *
  * Return: Always 0 on success, 1 on error
@@ -82,8 +80,7 @@ int print_alias(list_t *node)
 
 /**
  * _myalias - mimics the alias builtin (man alias)
- * @pop: Structure containing potential arguments. Used to maintain
- *          constant function prototype.
+ * @pop: parameter structure for prototype
  *  Return: Always 0
  */
 int _myalias(pops *pop)
