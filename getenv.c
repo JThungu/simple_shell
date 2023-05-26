@@ -2,8 +2,7 @@
 
 /**
  * get_environ - returns the string array copy of our environ
- * @pop: Structure containing potential arguments. Used to maintain
- *          constant function prototype
+ * @pop: parameter structure for prototype
  * Return: Always 0
  */
 char **get_environ(pops *pop)
@@ -19,8 +18,7 @@ char **get_environ(pops *pop)
 
 /**
  * _unsetenv - Remove an environment variable
- * @pop: Structure containing potential arguments. Used to maintain
- *        constant function prototype.
+ * @pop: parameter structure for prototype
  *  Return: 1 on delete, 0 otherwise
  * @var: the string env var property
  */
@@ -52,10 +50,9 @@ int _unsetenv(pops *pop, char *var)
 /**
  * _setenv - Initialize a new environment variable,
  *             or modify an existing one
- * @pop: Structure containing potential arguments. Used to maintain
- *        constant function prototype.
- * @var: the string env var property
- * @value: the string env var value
+ * @pop: parameter structure for prototype
+ * @var: string env var property
+ * @value: string env var value
  *  Return: Always 0
  */
 int _setenv(pops *pop, char *var, char *value)
