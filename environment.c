@@ -2,8 +2,7 @@
 
 /**
  * _myenv - prints the current environment
- * @pop: Structure containing potential arguments. Used to maintain
- *          constant function prototype
+ * @pop: parameter structure for prototpe
  * Return: Always 0
  */
 int _myenv(pops *pop)
