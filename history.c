@@ -2,7 +2,7 @@
 
 /**
  * get_history_file - gets the history file.
- * @pop: parameter struct
+ * @pop: parameter structure for prototype
  *
  * Return: allocated string containg history file
  */
@@ -26,7 +26,7 @@ char *get_history_file(pops *pop)
 
 /**
  * write_history - creates a file, or appends to an existing file
- * @pop: the parameter struct
+ * @pop: parameter structure for prototype
  *
  * Return: 1 on success, else -1
  */
@@ -55,7 +55,7 @@ int write_history(pops *pop)
 
 /**
  * read_history - reads history from file
- * @pop: the parameter struct
+ * @pop: parameter structure for prototype
  *
  * Return: histcount on success, 0 otherwise
  */
@@ -104,7 +104,7 @@ int read_history(pops *pop)
 
 /**
  * build_history_list - adds entry to a history linked list
- * @pop: Structure containing potential arguments. Used to maintain
+ * @pop: parameter structure for prototype
  * @buf: buffer
  * @linecount: the history linecount, histcount
  *
@@ -125,7 +125,7 @@ int build_history_list(pops *pop, char *buf, int linecount)
 
 /**
  * renumber_history - renumbers the history linked list after changes
- * @pop: Structure containing potential arguments. Used to maintain
+ * @pop: parameter structure for prototype
  *
  * Return: the new histcount
  */
