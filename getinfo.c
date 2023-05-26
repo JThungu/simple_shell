@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * clear_pop - initializes pops struct.
- * @pop: struct address
+ * clear_pop - initializes pops struct
+ * @pop: parameter structure for prototype
  */
 void clear_pop(pops *pop)
 {
@@ -14,7 +14,7 @@ void clear_pop(pops *pop)
 
 /**
  * set_pop - initializes pops struct
- * @pop: struct address
+ * @pop: parameter structure for prototype
  * @av: argument vector
  */
 void set_pop(pops *pop, char **av)
@@ -46,7 +46,7 @@ void set_pop(pops *pop, char **av)
 
 /**
  * free_pop - frees pops struct fields
- * @pop: struct address
+ * @pop: parameter structure for prototype
  * @all: true if freeing all fields
  */
 void free_pop(pops *pop, int all)
