@@ -2,7 +2,7 @@
 
 /**
  * is_cmd - determines if a file is an executable command.
- * @pop: the pop struct
+ * @pop: parameter structure for prototype
  * @path: path to the file
  *
  * Return: 1 if true, 0 otherwise
@@ -44,7 +44,7 @@ char *dup_chars(char *pathstr, int start, int stop)
 
 /**
  * find_path - finds this cmd in the PATH string
- * @pop: the pop struct
+ * @pop: parameter structure for prototype
  * @pathstr: the PATH string
  * @cmd: the cmd to find
  *
