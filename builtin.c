@@ -2,7 +2,7 @@
 
 /**
  * _myexit - exits the shell
- * @pop: Structure containing potential arguments
+ * @pop: parameter structure for prototype
  *  Return: exits with a given exit status
  *         (0) if pop.argv[0] != "exit"
  */
@@ -30,8 +30,7 @@ int _myexit(pops *pop)
 
 /**
  * _mycd - changes the current directory of the process
- * @pop: Structure containing potential arguments. Used to maintain
- *          constant function prototype.
+ * @pop: parameter structure for prototype
  *  Return: Always 0
  */
 int _mycd(pops *pop)
@@ -80,8 +79,7 @@ int _mycd(pops *pop)
 
 /**
  * _myhelp - changes the current directory of the process
- * @pop: Structure containing potential arguments. Used to maintain
- *          constant function prototype.
+ * @pop: parameter structure for prototype
  *  Return: Always 0
  */
 int _myhelp(pops *pop)
