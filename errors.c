@@ -2,7 +2,7 @@
 
 /**
  * _erratoi - converts a string to an integer
- * @s: the string to be converted
+ * @s: converted string
  * Return: 0 if no numbers in string, converted number otherwise
  *       -1 on error
  */
@@ -12,7 +12,7 @@ int _erratoi(char *s)
 	unsigned long int result = 0;
 
 	if (*s == '+')
-		s++;  /* TODO: why does this make main return 255? */
+		s++;
 	for (i = 0;  s[i] != '\0'; i++)
 	{
 		if (s[i] >= '0' && s[i] <= '9')
@@ -30,7 +30,7 @@ int _erratoi(char *s)
 
 /**
  * print_error - prints an error message
- * @pop: the parameter & return pop struct
+ * @pop: parameter structure for prototype
  * @estr: string containing specified error type
  * Return: 0 if no numbers in string, converted number otherwise
  *        -1 on error
@@ -48,7 +48,7 @@ void print_error(pops *pop, char *estr)
 
 /**
  * print_d - function prints a decimal (integer) number (base 10)
- * @input: the input
+ * @input: capture
  * @fd: the filedescriptor to write to
  *
  * Return: number of characters printed
@@ -86,7 +86,7 @@ int print_d(int input, int fd)
 }
 
 /**
- * convert_number - converter function, a clone of itoa
+ * convert_number - converter function
  * @num: number
  * @base: base
  * @flags: argument flags
@@ -123,7 +123,7 @@ char *convert_number(long int num, int base, int flags)
 
 /**
  * remove_comments - function replaces first instance of '#' with '\0'
- * @buf: address of the string to modify
+ * @buf: address of modified string
  *
  * Return: Always 0;
  */
