@@ -2,8 +2,8 @@
 
 /**
  * input_buf - buffers chained commands.
- * @pop: parameter struct
- * @buf: address of buffer
+ * @pop: parameter structure for prototype
+ * @buf: buffer address
  * @len: address of len var
  *
  * Return: bytes read
@@ -13,7 +13,7 @@ ssize_t input_buf(pops *pop, char **buf, size_t *len)
 	ssize_t r = 0;
 	size_t len_p = 0;
 
-	if (!*len) /* if nothing left in the buffer, fill it */
+	if (!*len)
 	{
 		/*bfree((void **)pop->cmd_buf);*/
 		free(*buf);
@@ -28,13 +28,13 @@ ssize_t input_buf(pops *pop, char **buf, size_t *len)
 		{
 			if ((*buf)[r - 1] == '\n')
 			{
-				(*buf)[r - 1] = '\0'; /* remove trailing newline */
+				(*buf)[r - 1] = '\0';
 				r--;
 			}
 			pop->linecount_flag = 1;
 			remove_comments(*buf);
 			build_history_list(pop, *buf, pop->histcount++);
-			/* if (_strchr(*buf, ';')) is this a command chain? */
+			/* if (_strchr(*buf, ';'))
 			{
 				*len = r;
 				pop->cmd_buf = buf;
@@ -46,13 +46,13 @@ ssize_t input_buf(pops *pop, char **buf, size_t *len)
 
 /**
  * get_input - gets a line minus the newline
- * @pop: parameter struct
+ * @pop: parameter structure for prototype
  *
  * Return: bytes read
  */
 ssize_t get_input(pops *pop)
 {
-	static char *buf; /* the ';' command chain buffer */
+	static char *buf; 
 	static size_t i, j, len;
 	ssize_t r = 0;
 	char **buf_p = &(pop->arg), *p;
@@ -61,37 +61,37 @@ ssize_t get_input(pops *pop)
 	r = input_buf(pop, &buf, &len);
 	if (r == -1) /* EOF */
 		return (-1);
-	if (len)	/* we have commands left in the chain buffer */
+	if (len)
 	{
-		j = i; /* init new iterator to current buf position */
-		p = buf + i; /* get pointer for return */
+		j = i;
+		p = buf + i;
 
 		check_chain(pop, buf, &j, i, len);
-		while (j < len) /* iterate to semicolon or end */
+		while (j < len)
 		{
 			if (is_chain(pop, buf, &j))
 				break;
 			j++;
 		}
 
-		i = j + 1; /* increment past nulled ';'' */
-		if (i >= len) /* reached end of buffer? */
+		i = j + 1;
+		if (i >= len)
 		{
-			i = len = 0; /* reset position and length */
+			i = len = 0;
 			pop->cmd_buf_type = CMD_NORM;
 		}
 
-		*buf_p = p; /* pass back pointer to current command position */
-		return (_strlen(p)); /* return length of current command */
+		*buf_p = p;
+		return (_strlen(p));
 	}
 
-	*buf_p = buf; /* else not a chain, pass back buffer from _getline() */
-	return (r); /* return length of buffer from _getline() */
+	*buf_p = buf;
+	return (r);
 }
 
 /**
  * read_buf - reads a buffer
- * @pop: parameter struct
+ * @pop: parameter structure for prototype
  * @buf: buffer
  * @i: size
  *
@@ -111,7 +111,7 @@ ssize_t read_buf(pops *pop, char *buf, size_t *i)
 
 /**
  * _getline - gets the next line of input from STDIN
- * @pop: parameter struct
+ * @pop: parameter structure for prototype
  * @ptr: address of pointer to buffer, preallocated or NULL
  * @length: size of preallocated ptr buffer if not NULL
  *
