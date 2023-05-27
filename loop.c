@@ -152,7 +152,7 @@ void fork_cmd(pops *pop)
 		{
 			pop->status = WEXITSTATUS(pop->status);
 			if (pop->status == 126)
-				print_error(pop, "Permission denied\n");
+				print_error(pop, "Denied Access\n");
 		}
 	}
 }
