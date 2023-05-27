@@ -1,5 +1,5 @@
-#ifndef _SHELL_H_
-#define _SHELL_H_
+#ifndef SHELL_H
+#define SHELL_H
 #include <stdio.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
@@ -98,9 +98,12 @@ void free_list(list_t **);
 size_t list_len(const list_t *);
 char **list_to_strings(list_t *);
 size_t print_list(const list_t *);
+int _erratoi(char *s);
 list_t *node_starts_with(list_t *, char *, char);
+int _mycd(info_t *info);
 ssize_t get_node_index(list_t *, list_t *);
 int is_chain(info_t *, char *, size_t *);
+char *_strcpy(char *dest, char *src);
 void check_chain(info_t *, char *, size_t *, size_t, size_t);
 int replace_alias(info_t *);
 int replace_vars(info_t *);
