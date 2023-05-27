@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * **strtow - splits a string into words 
+ * **strtow - splits a string into words
  * @str: inserted string
  * @d: string delimeter
  * Return: a pointer to an array of strings, or NULL on failure

@@ -57,8 +57,8 @@ char *starts_with(const char *haystack, const char *needle)
 
 /**
  * _strcat - concatenates two strings
- * @dest: buffer destination 
- * @src: buffer source 
+ * @dest: buffer destination
+ * @src: buffer source
  *
  * Return: pointer to destination buffer
  */
